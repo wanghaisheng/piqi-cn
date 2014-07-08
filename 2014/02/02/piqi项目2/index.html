@@ -1,0 +1,1008 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+  <meta charset="utf-8">
+  
+  <title>piqi项目2 | piqi官方网站 中文版镜像</title>
+  <meta name="author" content="Edwin">
+  
+  <meta name="description" content="piqi官方网站 中文版镜像">
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1">
+
+  <meta property="og:title" content="piqi项目2"/>
+  <meta property="og:site_name" content="piqi官方网站 中文版镜像"/>
+
+  
+    <meta property="og:image" content="undefined"/>
+  
+
+  <link href="/favicon.png" rel="icon">
+  <link rel="alternate" href="/atom.xml" title="piqi官方网站 中文版镜像" type="application/atom+xml">
+  <link rel="stylesheet" href="css/style.css" media="screen" type="text/css">
+  <script src="//upcdn.b0.upaiyun.com/libs/modernizr/modernizr-2.6.2.min.js"></script>
+  
+</head>
+
+
+<body>
+  <div id="container" class="container">
+    <header id="sidebar" role="banner" class="sidebar"><div id="branding" class="branding">
+  <a href="/">
+    <img class="circle" src="img/koala.jpg" alt="Anthem">
+  </a>
+  <h1 id="site-title" class="title">
+    <a href="/">piqi官方网站 中文版镜像</a>
+  </h1>
+</div>
+<a href="#" id="toggle">信息</a>
+<div class="about" style="display: none">
+  <p>piqi官方网站 中文版镜像</p>
+</div>
+<nav class="menu-navigation-container">
+  <ul>
+    
+      <li><a href="/">首页</a></li>
+    
+      <li><a href="/实例">实例</a></li>
+    
+      <li><a href="/文档">文档</a></li>
+    
+      <li><a href="/FAQ">FAQ</a></li>
+    
+      <li><a href="/下载">下载</a></li>
+    
+      <li><a href="/路线图">路线图</a></li>
+    
+      <li><a href="/原理">原理</a></li>
+    
+      <li><a href="/许可协议">许可协议</a></li>
+    
+  </ul>
+</nav>
+<div class="widget">
+  
+  <nav class="other">
+  <ul>
+    <li>
+      <a href="http://piqi.org/" target="_blank">piqi官方网站</a>
+    </li>
+    <li>
+      <a href="https://github.com/alavrik/piqi/blob/master/LICENSE/" target="_blank">版权声明</a>
+    </li>
+    <li>
+      <a href="https://github.com/alavrik/piqi" target="_blank">GitHub repository</a>
+    </li>
+    <li>
+      <a href="http://groups.google.com/group/piqi" target="_blank">Google Group</a>
+    </li>
+
+  </ul>
+</nav>
+
+  <nav class="search">
+  <form action="http://google.com/search" method="get" accept-charset="utf-8">
+    <input type="search" name="q" results="0" placeholder="Search">
+    <input type="hidden" name="q" value="site:yoursite.com">
+  </form>
+</nav>
+
+</div></header>
+    <section id="content" class="blog">
+      <article class="post">
+  <header>
+    
+  
+    <h1 class="title">piqi项目2</h1>
+  
+
+    
+      <div class="gallery">
+  <div class="photoset">
+    
+      <img src="">
+    
+  </div>
+  <div class="control">
+    <div class="prev"></div>
+    <div class="next"></div>
+  </div>
+</div>
+    
+  </header>
+  <section class="entry">
+    
+      <p><a href="#examples">示例</a> // <a href="#limitations">局限性</a> // <a href="#howtogetstarted">入门</a> // <a href="#projectstatus">项目进展</a></p>
+<p><img src="/images/piqi-small.png" alt=""></p>
+<p>Piqi (/pɪki/)是一种schema语言,与之对应有一些工具.</p>
+<p>Piqi语言可以用在为JSON,XML,Google Protocol Buffer等数据格式定义schema.</p>
+<p>Piqi的子项目包括:</p>
+<ul>
+<li><p>用以校验 格式化和在JSON,XML,Protocol Buffer格式间互相转换的命令行工具.</p>
+</li>
+<li><p>针对<a href="https://github.com/alavrik/piqi-erlang" target="_blank" rel="external">Erlang</a> and <a href="https://github.com/alavrik/piqi-ocaml" target="_blank" rel="external">OCaml</a>的多种格式的数据序列化程序.</p>
+</li>
+<li><p>Piq-对人友好的类型化数据表达语言. 它设计的初衷在于,与JSON XML CSV,S表达式和其他格式相比,浏览/编辑数据更加方便.</p>
+</li>
+<li><p>Piqi-RPC-针对Erlang的RPC-HTTP库.它提供了一种简单的方式来构建基于HTTP的JSON XML Protocol Buffer的Erlang服务.     </p>
+</li>
+</ul>
+<p>Piqi项目受Google Protocol Buffers的启发,设计之初就在很大程度上兼容Google Protocol Buffers. 和Google Protocol Buffers类似,Piqi依赖类型定义,支持schema演化.主要的差异在于Piqi拥有一个更为强大的数据模型,高等级的模块,与JSON XML之间的标准映射,也有强大的数据表达格式Piq.同时,Piqi扩展性更强.</p>
+<p>更多Piqi与其他程序的对比信息可以参考<a href="/rationale/">Rationale</a> and <a href="/faq/">FAQ</a> . Protocol Buffers 和 Piqi 的兼容性<a href="/doc/protobuf/">请参考</a>.</p>
+<h2 id="组件和子项目">组件和子项目</h2>
+<p>如下是对Piqi组件和子项目的概述.</p>
+<p><strong>Piqi- 一种schema语言</strong> (文件后缀名为<code>.piqi</code> )</p>
+<p>Piqi可以用作JSON, XML, Protocol Bufferss 和 Piq的schema语言.</p>
+<p>Piqi支持对record\varaiant<a href="http://en.wikipedia.org/wiki/Tagged_union" target="_blank" rel="external">tagged unions</a>)\enum\list和type aliase的定义.</p>
+<p>Piqi支持高级模块和从其他模块中导入/包含定义的机制.</p>
+<p>Piqi的类型定义是可扩展的,在保持前后兼容的情况下,支持schema的演化.</p>
+<p>数据模型,扩展性和模块引入的结合使得Piqi成为自定义语言.地自定义的特性本身就很好,同时也有利于Piqi的实现,使得语言的扩展性增强.</p>
+<p>Piqi(<code>.piqi</code> 文件中定义) 的模块和类型可以转换为Google Protocol Buffers类型标准(<code>.proto</code> files),反之亦然.</p>
+<p>Piqi的模块可以用Protocol Buffers, JSON and XML格式来表达. 这样其他程序能够就简单的与Piqi类型定义整合在一起.</p>
+<p><a href="/doc/piqi/#overview">(Piqi的完整特性列表)</a></p>
+<p><strong>Piq -一种数据表达语言</strong> (文件后缀为<code>.piq</code>)</p>
+<p>Piq是一种基于文本的语言,能够让人很容易地读写和编辑结构化数据. </p>
+<p>它的语法很简明 很强大 能够表达诸如数字 布尔值 字符串 二进制流 列表和自由文本等多种数据对象.</p>
+<p>Piq是一种流格式,也就是说一份<code>.piq</code>文件可以包含多个Piq 对象. 除了数据之外, Piq 流还能够以内嵌Piqi模块的方式引入/包含类型定义.</p>
+<p><a href="/doc/piqi/#overview">(Piqi的完整特性列表)</a></p>
+<p><strong>编程语言对应的序列化程序</strong></p>
+<p>Piqi通过<a href="/doc/protobuf/">Google Protocol Buffers</a>和使用<a href="/doc/ocaml/">OCaml</a> and <a href="/doc/erlang/">Erlang</a>实现提供了对编程语言的静态映射.</p>
+<p>Protocol Buffers官方支持Python, Java and C++.也有一些诸如C#, Go, Common Lisp, Scala, Clojure等编程语言的<a href="http://code.google.com/p/protobuf/wiki/ThirdPartyAddOns" target="_blank" rel="external">第三方库</a>.</p>
+<p>诸如JavaScript等动态编程语言也能够使用JSON or XML <a href="/doc/encodings/">编码</a> 的数据.</p>
+<p><strong>Piq and Piqi的命令行工具</strong></p>
+<p><code>piqi</code> 静态可执行程序,实现了以下命令:</p>
+<p><code>piqi convert</code>    Piq, JSON, XML and Protocol Buffers 格式的结构化数据之间的转换.</p>
+<p><code>piqi check</code>   校验 <code>.piq</code> and <code>.piqi</code> 的有效性</p>
+<p><code>piqi pp</code>   格式化 <code>.piq</code> and <code>.piqi</code> 文件</p>
+<p><code>piqi to-proto</code>, <code>piqi of-proto</code>   <code>.piqi</code> 与 <code>.proto</code>之间的转换</p>
+<p><a href="/doc/tools/">(更多Piqi工具)</a></p>
+<p><strong>Piqi-RPC: 基于HTTP 的RPC程序 for Erlang</strong></p>
+<p>Piqi-RPC为Erlang开发让你有提供了一种简便可靠的方式,通过使用基于HTTP的JSON, XML or Google Protocol Buffers,将基于Erlang编写的服务与其他非Erlang的客户端集成起来.</p>
+<p>同时也包含了<code>piqi call</code>  通过命令行远程调用Piqi-RPC Erlang函数的客户端. <code>piqi call</code> 获取命令行参数,将参数转换为远程函数的入参.</p>
+<p><a href="/doc/piqi-rpc/">(Piqi-RPC相关的更多信息)</a></p>
+<h2 id="Examples"><a name="examples">Examples</a></h2>
+<p>如下是两个示例:</p>
+<ul>
+<li><p><code>person.piq</code> 是表示一个addressbook的Piq文件 其中包含了两个person的record记录.</p>
+</li>
+<li><p><code>person.piqi</code> 是一个Piqi模块,包含了对person record类型的定义.</p>
+</li>
+</ul>
+<p>详细信息参见 <a href="/examples/">示例</a> page.</p>
+<p><a href="#person_piqi">person.piqi</a></p>
+<ul>
+<li><a href="#person_piqi_source">Source</a></li>
+</ul>
+<figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+</pre></td><td class="code"><pre>% definition <span class="keyword">of</span> a <span class="type">record</span> type
+.<span class="type">record</span> [
+    .<span class="property">name</span> person      % <span class="type">record</span> <span class="property">name</span>
+    .field [
+        .<span class="property">name</span> <span class="property">name</span>    % field <span class="property">name</span>
+        .type <span class="type">string</span>  % field type
+    ]
+    .field [
+        .<span class="property">name</span> <span class="property">id</span>
+        .type int
+    ]
+    .field [
+        .<span class="property">name</span> email
+        .type <span class="type">string</span>
+        .optional     % field <span class="keyword">is</span> optional
+    ]
+    .field [
+        .<span class="property">name</span> phone
+        .type phone-<span class="type">number</span>
+        .repeated     % field can be repeated <span class="number">0</span> <span class="keyword">or</span> more <span class="keyword">times</span>
+    ]
+]
+
+.<span class="type">record</span> [
+    .<span class="property">name</span> phone-<span class="type">number</span>
+    .field [
+        .<span class="property">name</span> <span class="type">number</span>
+        .type <span class="type">string</span>
+    ]
+    .field [
+        .<span class="property">name</span> type
+        .type phone-type
+        .optional
+        .default.home  % default value <span class="keyword">for</span> an optional field
+
+        % <span class="string">".default.home"</span> <span class="keyword">is</span> a shorthand <span class="keyword">for</span> <span class="string">".default (.home)"</span>, <span class="keyword">where</span>
+        % <span class="string">".home"</span> <span class="keyword">is</span> a value <span class="keyword">of</span> <span class="keyword">the</span> enum type defined <span class="keyword">below</span>
+    ]
+]
+
+% definition <span class="keyword">of</span> an enum type
+.enum [
+    .<span class="property">name</span> phone-type
+    .option [ .<span class="property">name</span> mobile ]
+    .option [ .<span class="property">name</span> home ]
+    .option [ .<span class="property">name</span> work ]
+]
+</pre></td></tr></table></figure><br><em>   <a href="#person_piqi_proto">Piqi.Proto</a><br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+</pre></td><td class="code"><pre>message person {
+    required <span class="type">string</span> <span class="property">name</span> = <span class="number">1</span>;
+    required sint32 <span class="property">id</span> = <span class="number">2</span>;
+    optional <span class="type">string</span> email = <span class="number">3</span>;
+    repeated phone_number phone = <span class="number">4</span>;
+}
+
+message phone_number {
+    required <span class="type">string</span> <span class="type">number</span> = <span class="number">1</span>;
+    optional phone_type type = <span class="number">2</span> [default = home];
+}
+
+enum phone_type {
+    mobile = <span class="number">1</span>;
+    home = <span class="number">2</span>;
+    work = <span class="number">3</span>;
+}
+</pre></td></tr></table></figure>
+</em>   <a href="#person_piqi_json">Piqi.JSON</a><br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+</pre></td><td class="code"><pre>{
+  "<span class="attribute">piqi_type</span>": <span class="value"><span class="string">"piqi"</span></span>,
+  "<span class="attribute">module</span>": <span class="value"><span class="string">"person"</span></span>,
+  "<span class="attribute">typedef</span>": <span class="value">[
+    {
+      "<span class="attribute">record</span>": <span class="value">{
+        "<span class="attribute">name</span>": <span class="value"><span class="string">"person"</span></span>,
+        "<span class="attribute">field</span>": <span class="value">[
+          { "<span class="attribute">name</span>": <span class="value"><span class="string">"name"</span></span>, "<span class="attribute">type</span>": <span class="value"><span class="string">"string"</span></span>, "<span class="attribute">mode</span>": <span class="value"><span class="string">"required"</span> </span>},
+          { "<span class="attribute">name</span>": <span class="value"><span class="string">"id"</span></span>, "<span class="attribute">type</span>": <span class="value"><span class="string">"int"</span></span>, "<span class="attribute">mode</span>": <span class="value"><span class="string">"required"</span> </span>},
+          { "<span class="attribute">name</span>": <span class="value"><span class="string">"email"</span></span>, "<span class="attribute">type</span>": <span class="value"><span class="string">"string"</span></span>, "<span class="attribute">mode</span>": <span class="value"><span class="string">"optional"</span> </span>},
+          { "<span class="attribute">name</span>": <span class="value"><span class="string">"phone"</span></span>, "<span class="attribute">type</span>": <span class="value"><span class="string">"phone-number"</span></span>, "<span class="attribute">mode</span>": <span class="value"><span class="string">"repeated"</span> </span>}
+        ]
+      </span>}
+    </span>},
+    {
+      "<span class="attribute">record</span>": <span class="value">{
+        "<span class="attribute">name</span>": <span class="value"><span class="string">"phone-number"</span></span>,
+        "<span class="attribute">field</span>": <span class="value">[
+          { "<span class="attribute">name</span>": <span class="value"><span class="string">"number"</span></span>, "<span class="attribute">type</span>": <span class="value"><span class="string">"string"</span></span>, "<span class="attribute">mode</span>": <span class="value"><span class="string">"required"</span> </span>},
+          {
+            "<span class="attribute">name</span>": <span class="value"><span class="string">"type"</span></span>,
+            "<span class="attribute">type</span>": <span class="value"><span class="string">"phone-type"</span></span>,
+            "<span class="attribute">mode</span>": <span class="value"><span class="string">"optional"</span></span>,
+            "<span class="attribute">default</span>": <span class="value"><span class="string">"home"</span>
+          </span>}
+        ]
+      </span>}
+    </span>},
+    {
+      "<span class="attribute">enum</span>": <span class="value">{
+        "<span class="attribute">name</span>": <span class="value"><span class="string">"phone-type"</span></span>,
+        "<span class="attribute">option</span>": <span class="value">[
+          { "<span class="attribute">name</span>": <span class="value"><span class="string">"mobile"</span> </span>},
+          { "<span class="attribute">name</span>": <span class="value"><span class="string">"home"</span> </span>},
+          { "<span class="attribute">name</span>": <span class="value"><span class="string">"work"</span> </span>}
+        ]
+      </span>}
+    </span>}
+  ]
+</span>}
+</pre></td></tr></table></figure><br><em>   <a href="#person_piqi_xml">Piqi.XML</a><br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+</pre></td><td class="code"><pre><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="tag">&lt;<span class="title">value</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">module</span>&gt;</span>person<span class="tag">&lt;/<span class="title">module</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">typedef</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">record</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">name</span>&gt;</span>person<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">field</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">name</span>&gt;</span>name<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">type</span>&gt;</span>string<span class="tag">&lt;/<span class="title">type</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">mode</span>&gt;</span>required<span class="tag">&lt;/<span class="title">mode</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">field</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">field</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">name</span>&gt;</span>id<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">type</span>&gt;</span>int<span class="tag">&lt;/<span class="title">type</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">mode</span>&gt;</span>required<span class="tag">&lt;/<span class="title">mode</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">field</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">field</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">name</span>&gt;</span>email<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">type</span>&gt;</span>string<span class="tag">&lt;/<span class="title">type</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">mode</span>&gt;</span>optional<span class="tag">&lt;/<span class="title">mode</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">field</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">field</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">name</span>&gt;</span>phone<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">type</span>&gt;</span>phone-number<span class="tag">&lt;/<span class="title">type</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">mode</span>&gt;</span>repeated<span class="tag">&lt;/<span class="title">mode</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">field</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">record</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">typedef</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">typedef</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">record</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">name</span>&gt;</span>phone-number<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">field</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">name</span>&gt;</span>number<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">type</span>&gt;</span>string<span class="tag">&lt;/<span class="title">type</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">mode</span>&gt;</span>required<span class="tag">&lt;/<span class="title">mode</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">field</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">field</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">name</span>&gt;</span>type<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">type</span>&gt;</span>phone-type<span class="tag">&lt;/<span class="title">type</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">mode</span>&gt;</span>optional<span class="tag">&lt;/<span class="title">mode</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">default</span>&gt;</span>home<span class="tag">&lt;/<span class="title">default</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">field</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">record</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">typedef</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">typedef</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">enum</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">name</span>&gt;</span>phone-type<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">option</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">name</span>&gt;</span>mobile<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">option</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">name</span>&gt;</span>home<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+      <span class="tag">&lt;<span class="title">option</span>&gt;</span>
+        <span class="tag">&lt;<span class="title">name</span>&gt;</span>work<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+      <span class="tag">&lt;/<span class="title">option</span>&gt;</span>
+    <span class="tag">&lt;/<span class="title">enum</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">typedef</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">value</span>&gt;</span>
+</pre></td></tr></table></figure>
+</em>   <a href="#person_piqi_light">Piqi-light</a><br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+</pre></td><td class="code"><pre><span class="keyword">type</span> person <span class="subst">=</span>
+  {
+    <span class="subst">-</span> name <span class="tag">:: string</span>()
+    <span class="subst">-</span> id <span class="tag">:: int</span>()
+    <span class="subst">?</span> email <span class="tag">:: string</span>()
+    <span class="subst">*</span> phone <span class="tag">:: phone</span><span class="attribute">-number</span>()
+  }
+
+<span class="keyword">type</span> phone<span class="attribute">-number</span> <span class="subst">=</span>
+  {
+    <span class="subst">-</span> number <span class="tag">:: string</span>()
+    <span class="subst">?</span> <span class="keyword">type</span> <span class="tag">:: phone</span><span class="attribute">-type</span>() <span class="subst">=</span> <span class="built_in">.</span>home
+  }
+
+<span class="keyword">type</span> phone<span class="attribute">-type</span> <span class="subst">=</span>
+    <span class="subst">|</span> mobile
+    <span class="subst">|</span> home
+    <span class="subst">|</span> work
+</pre></td></tr></table></figure><br><a href="#person_piq">person.piq</a><br><br><em>   <a href="#person_piq_source">Source</a><br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+</pre></td><td class="code"><pre>% this <span class="keyword">is</span> an object <span class="keyword">of</span> type <span class="string">"person"</span> which <span class="keyword">is</span> defined <span class="keyword">in</span> module <span class="string">"person"</span>
+:person/person [
+    .<span class="property">name</span> <span class="string">"J. Random Hacker"</span>
+    .<span class="property">id</span> <span class="number">0</span>
+
+    .email <span class="string">"j.r.hacker@example.com"</span>
+
+    .phone [
+        .<span class="type">number</span> <span class="string">"(111) 123 45 67"</span>
+        % NOTE: phone <span class="keyword">is</span> <span class="string">"home"</span> <span class="keyword">by</span> default
+    ]
+
+    .phone [
+        .<span class="type">number</span> <span class="string">"(222) 123 45 67"</span>
+        .mobile
+    ]
+
+    .phone [
+        .<span class="type">number</span> <span class="string">"(333) 123 45 67"</span>
+        .work
+    ]
+]
+
+% another object <span class="keyword">of</span> <span class="keyword">the</span> same type
+:person/person [
+    .<span class="property">name</span> <span class="string">"Joe User"</span>
+    .<span class="property">id</span> <span class="number">1</span>
+
+    % Joe User doesn't have an email
+
+    .phone [ <span class="string">"(444) 123 45 67"</span> ]
+    .phone [ <span class="string">"(555) 123 45 67"</span> .work ]
+]
+</pre></td></tr></table></figure>
+</em>   <a href="#person_piq_piq">Piq</a><br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+</pre></td><td class="code"><pre>:person/person [
+    <span class="preprocessor">.name</span> <span class="string">"J. Random Hacker"</span>
+    <span class="preprocessor">.id</span> <span class="number">0</span>
+    <span class="preprocessor">.email</span> <span class="string">"j.r.hacker@example.com"</span>
+    <span class="preprocessor">.phone</span> [ <span class="preprocessor">.number</span> <span class="string">"(111) 123 45 67"</span> ]
+    <span class="preprocessor">.phone</span> [
+        <span class="preprocessor">.number</span> <span class="string">"(222) 123 45 67"</span>
+        <span class="preprocessor">.type</span><span class="preprocessor">.mobile</span>
+    ]
+    <span class="preprocessor">.phone</span> [
+        <span class="preprocessor">.number</span> <span class="string">"(333) 123 45 67"</span>
+        <span class="preprocessor">.type</span><span class="preprocessor">.work</span>
+    ]
+]
+
+:person/person [
+    <span class="preprocessor">.name</span> <span class="string">"Joe User"</span>
+    <span class="preprocessor">.id</span> <span class="number">1</span>
+    <span class="preprocessor">.phone</span> [ <span class="preprocessor">.number</span> <span class="string">"(444) 123 45 67"</span> ]
+    <span class="preprocessor">.phone</span> [
+        <span class="preprocessor">.number</span> <span class="string">"(555) 123 45 67"</span>
+        <span class="preprocessor">.type</span><span class="preprocessor">.work</span>
+    ]
+]
+</pre></td></tr></table></figure><br><em>   <a href="#person_piq_json">JSON</a><br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+</pre></td><td class="code"><pre>{
+  "<span class="attribute">piqi_type</span>": <span class="value"><span class="string">"person/person"</span></span>,
+  "<span class="attribute">name</span>": <span class="value"><span class="string">"J. Random Hacker"</span></span>,
+  "<span class="attribute">id</span>": <span class="value"><span class="number">0</span></span>,
+  "<span class="attribute">email</span>": <span class="value"><span class="string">"j.r.hacker@example.com"</span></span>,
+  "<span class="attribute">phone</span>": <span class="value">[
+    { "<span class="attribute">number</span>": <span class="value"><span class="string">"(111) 123 45 67"</span></span>, "<span class="attribute">type</span>": <span class="value"><span class="string">"home"</span> </span>},
+    { "<span class="attribute">number</span>": <span class="value"><span class="string">"(222) 123 45 67"</span></span>, "<span class="attribute">type</span>": <span class="value"><span class="string">"mobile"</span> </span>},
+    { "<span class="attribute">number</span>": <span class="value"><span class="string">"(333) 123 45 67"</span></span>, "<span class="attribute">type</span>": <span class="value"><span class="string">"work"</span> </span>}
+  ]
+</span>}
+
+{
+  "<span class="attribute">piqi_type</span>": <span class="value"><span class="string">"person/person"</span></span>,
+  "<span class="attribute">name</span>": <span class="value"><span class="string">"Joe User"</span></span>,
+  "<span class="attribute">id</span>": <span class="value"><span class="number">1</span></span>,
+  "<span class="attribute">phone</span>": <span class="value">[
+    { "<span class="attribute">number</span>": <span class="value"><span class="string">"(444) 123 45 67"</span></span>, "<span class="attribute">type</span>": <span class="value"><span class="string">"home"</span> </span>},
+    { "<span class="attribute">number</span>": <span class="value"><span class="string">"(555) 123 45 67"</span></span>, "<span class="attribute">type</span>": <span class="value"><span class="string">"work"</span> </span>}
+  ]
+</span>}
+</pre></td></tr></table></figure>
+</em>   <a href="#person_piq_xml">XML</a><br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+</pre></td><td class="code"><pre><span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="tag">&lt;<span class="title">value</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">name</span>&gt;</span>J. Random Hacker<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">id</span>&gt;</span>0<span class="tag">&lt;/<span class="title">id</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">email</span>&gt;</span>j.r.hacker@example.com<span class="tag">&lt;/<span class="title">email</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">phone</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">number</span>&gt;</span>(111) 123 45 67<span class="tag">&lt;/<span class="title">number</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">type</span>&gt;</span>home<span class="tag">&lt;/<span class="title">type</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">phone</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">phone</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">number</span>&gt;</span>(222) 123 45 67<span class="tag">&lt;/<span class="title">number</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">type</span>&gt;</span>mobile<span class="tag">&lt;/<span class="title">type</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">phone</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">phone</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">number</span>&gt;</span>(333) 123 45 67<span class="tag">&lt;/<span class="title">number</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">type</span>&gt;</span>work<span class="tag">&lt;/<span class="title">type</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">phone</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">value</span>&gt;</span>
+
+<span class="pi">&lt;?xml version="1.0" encoding="UTF-8"?&gt;</span>
+<span class="tag">&lt;<span class="title">value</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">name</span>&gt;</span>Joe User<span class="tag">&lt;/<span class="title">name</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">id</span>&gt;</span>1<span class="tag">&lt;/<span class="title">id</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">phone</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">number</span>&gt;</span>(444) 123 45 67<span class="tag">&lt;/<span class="title">number</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">type</span>&gt;</span>home<span class="tag">&lt;/<span class="title">type</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">phone</span>&gt;</span>
+  <span class="tag">&lt;<span class="title">phone</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">number</span>&gt;</span>(555) 123 45 67<span class="tag">&lt;/<span class="title">number</span>&gt;</span>
+    <span class="tag">&lt;<span class="title">type</span>&gt;</span>work<span class="tag">&lt;/<span class="title">type</span>&gt;</span>
+  <span class="tag">&lt;/<span class="title">phone</span>&gt;</span>
+<span class="tag">&lt;/<span class="title">value</span>&gt;</span>
+</pre></td></tr></table></figure><br><em>   <a href="#person_piq_piq_embedded">Piq (with embedded Piqi)</a><br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+14
+15
+16
+17
+18
+19
+20
+21
+22
+23
+24
+25
+26
+27
+28
+29
+30
+31
+32
+33
+34
+35
+36
+37
+38
+39
+40
+41
+42
+43
+44
+45
+46
+47
+48
+49
+50
+51
+52
+53
+54
+55
+56
+57
+58
+59
+60
+61
+62
+63
+64
+65
+66
+67
+</pre></td><td class="code"><pre>:piqi [
+    <span class="preprocessor">.module</span> person
+    <span class="preprocessor">.record</span> [
+        <span class="preprocessor">.name</span> person
+        <span class="preprocessor">.field</span> [
+            <span class="preprocessor">.name</span> name
+            <span class="preprocessor">.type</span> string
+        ]
+        <span class="preprocessor">.field</span> [
+            <span class="preprocessor">.name</span> id
+            <span class="preprocessor">.type</span> int
+        ]
+        <span class="preprocessor">.field</span> [
+            <span class="preprocessor">.name</span> email
+            <span class="preprocessor">.type</span> string
+            <span class="preprocessor">.optional</span>
+        ]
+        <span class="preprocessor">.field</span> [
+            <span class="preprocessor">.name</span> phone
+            <span class="preprocessor">.type</span> phone-number
+            <span class="preprocessor">.repeated</span>
+        ]
+    ]
+    <span class="preprocessor">.record</span> [
+        <span class="preprocessor">.name</span> phone-number
+        <span class="preprocessor">.field</span> [
+            <span class="preprocessor">.name</span> number
+            <span class="preprocessor">.type</span> string
+        ]
+        <span class="preprocessor">.field</span> [
+            <span class="preprocessor">.name</span> type
+            <span class="preprocessor">.type</span> phone-type
+            <span class="preprocessor">.optional</span>
+            <span class="preprocessor">.default</span><span class="preprocessor">.home</span>
+        ]
+    ]
+    <span class="preprocessor">.enum</span> [
+        <span class="preprocessor">.name</span> phone-type
+        <span class="preprocessor">.option</span> [ <span class="preprocessor">.name</span> mobile ]
+        <span class="preprocessor">.option</span> [ <span class="preprocessor">.name</span> home ]
+        <span class="preprocessor">.option</span> [ <span class="preprocessor">.name</span> work ]
+    ]
+]
+:person/person [
+    <span class="preprocessor">.name</span> <span class="string">"J. Random Hacker"</span>
+    <span class="preprocessor">.id</span> <span class="number">0</span>
+    <span class="preprocessor">.email</span> <span class="string">"j.r.hacker@example.com"</span>
+    <span class="preprocessor">.phone</span> [ <span class="preprocessor">.number</span> <span class="string">"(111) 123 45 67"</span> ]
+    <span class="preprocessor">.phone</span> [
+        <span class="preprocessor">.number</span> <span class="string">"(222) 123 45 67"</span>
+        <span class="preprocessor">.type</span><span class="preprocessor">.mobile</span>
+    ]
+    <span class="preprocessor">.phone</span> [
+        <span class="preprocessor">.number</span> <span class="string">"(333) 123 45 67"</span>
+        <span class="preprocessor">.type</span><span class="preprocessor">.work</span>
+    ]
+]
+
+:person/person [
+    <span class="preprocessor">.name</span> <span class="string">"Joe User"</span>
+    <span class="preprocessor">.id</span> <span class="number">1</span>
+    <span class="preprocessor">.phone</span> [ <span class="preprocessor">.number</span> <span class="string">"(444) 123 45 67"</span> ]
+    <span class="preprocessor">.phone</span> [
+        <span class="preprocessor">.number</span> <span class="string">"(555) 123 45 67"</span>
+        <span class="preprocessor">.type</span><span class="preprocessor">.work</span>
+    ]
+]
+</pre></td></tr></table></figure>
+</em>   <a href="#person_piq_pib">Pib</a><br><br><figure class="highlight"><table><tr><td class="gutter"><pre>1
+2
+3
+4
+5
+6
+7
+8
+9
+10
+11
+12
+13
+</pre></td><td class="code"><pre><span class="attribute">0000000</span>: <span class="string">faff ffff 0f1c 0a09 7069 7169 2d74 7970  ........piqi-typ</span>
+<span class="attribute">0000010</span>: <span class="string">6512 0d70 6572 736f 6e2f 7065 7273 6f6e  e..person/person</span>
+<span class="attribute">0000020</span>: <span class="string">1802 1269 0a10 4a2e 2052 616e 646f 6d20  ...i..J. Random </span>
+<span class="attribute">0000030</span>: <span class="string">4861 636b 6572 1000 1a16 6a2e 722e 6861  Hacker....j.r.ha</span>
+<span class="attribute">0000040</span>: <span class="string">636b 6572 4065 7861 6d70 6c65 2e63 6f6d  cker@example.com</span>
+<span class="attribute">0000050</span>: <span class="string">2211 0a0f 2831 3131 2920 3132 3320 3435  "...(111) 123 45</span>
+<span class="attribute">0000060</span>: <span class="string">2036 3722 130a 0f28 3232 3229 2031 3233   67"...(222) 123</span>
+<span class="attribute">0000070</span>: <span class="string">2034 3520 3637 1001 2213 0a0f 2833 3333   45 67.."...(333</span>
+<span class="attribute">0000080</span>: <span class="string">2920 3132 3320 3435 2036 3710 0312 340a  ) 123 45 67...4.</span>
+<span class="attribute">0000090</span>: <span class="string">084a 6f65 2055 7365 7210 0222 110a 0f28  .Joe User.."...(</span>
+<span class="attribute">00000a0</span>: <span class="string">3434 3429 2031 3233 2034 3520 3637 2213  444) 123 45 67".</span>
+<span class="attribute">00000b0</span>: <span class="string">0a0f 2835 3535 2920 3132 3320 3435 2036  ..(555) 123 45 6</span>
+<span class="attribute">00000c0</span>: <span class="string">3710 03                                  7..</span>
+</pre></td></tr></table></figure>
+
+<h2 id="局限性"><a name="limitations">局限性</a></h2>
+<ul>
+<li><p>与XML不同的是, Piqi 不支持半结构化数据,没有查询和转换语言(有一些这方面的 <a href="/roadmap/">计划</a>). 同时,能够使用XPath, XSLT and XQuery来处理XML格式的数据 或者是 <a href="http://stedolan.github.com/jq/" target="_blank" rel="external">jq</a>等工具来处理JSON数据.</p>
+</li>
+<li><p>目前,Piqi语言的实现和Piqi的根据都被打包成一个单独的命令行工具,除了Erlang和OCaml以外,并不能作为第三方库来使用.</p>
+</li>
+</ul>
+<h2 id="如何入门"><a name="howtogetstarted">如何入门</a></h2>
+<p>阅读<a href="/doc/">文档</a>了解更多Piqi信息, 学习<a href="/examples/">范例</a>.</p>
+<p><a href="/downloads/">下载</a>工具或者从源代码开始编译 Piqi工具.</p>
+<p>跟踪 <a href="http://github.com/alavrik/piqi" target="_blank" rel="external">GitHub项目</a>或者<a href="http://piqi.org/blog/" target="_blank" rel="external">订阅最新消息</a>.</p>
+<p>如果你有任何问题或建议,欢迎到<a href="http://groups.google.com/group/piqi" target="_blank" rel="external">Piqi Google Group</a>或者 邮箱<a href="mailto:alavrik@piqi.org" target="_blank" rel="external">alavrik@piqi.org</a> twitter<a href="http://twitter.com/alavrik" target="_blank" rel="external">@alavrik</a>.</p>
+<p>如果你发现一个bug,请提交至<a href="http://github.com/alavrik/piqi/issues" target="_blank" rel="external">GitHub issue</a>.</p>
+<p>欢迎大家的反馈和参与! If you find Piqi useful in some way or another, please drop me a line.</p>
+<h2 id="项目进展"><a name="projectstatus">项目进展</a></h2>
+<p>Piqi 还处于Beta版.</p>
+<p>已经在Linux和Mac OS X平台上经过测试. 其他Unix系统也应该能够运行.比如, Piqi能够运行在 FreeBSD 和 Solaris/x86. Windows上可以利用MinGW and Cygwin来编译Piqi.详细信息参考<a href="http://github.com/alavrik/piqi/blob/master/INSTALL" target="_blank" rel="external">安装指南</a> .</p>
+<p>查阅<a href="/roadmap/">Roadmap page</a>,查看Piqi计划实现的特性. </p>
+<p>版权所有 2010-2014 <a href="mailto:alavrik@piqi.org" target="_blank" rel="external">Anton Lavrik</a></p>
+<pre><code>Except where otherwise noted the content of this website is licensed under a  [<span class="link_label">Creative Commons Attribution 3.0 Unported License</span>](<span class="link_url">http://creativecommons.org/licenses/by/3.0/</span>).
+</code></pre>
+    
+  </section>
+  <footer>
+    
+    <div class="clearfix"></div>
+    
+      <div class="widget">
+        
+          <time datetime="2014-02-02T10:18:30.000Z"><a href="/2014/02/02/piqi项目2/">Feb 2 2014</a></time>
+        
+        
+  
+  <a href="/categories/FAQ/">@FAQ</a>
+
+
+        
+
+        
+      </div>
+    
+    <div class="clearfix"></div>
+  </footer>
+</article>
+
+
+    </section>
+    <footer id="footer" class="clearfix footer"><div class="alignleft">
+  
+  &copy; 2014 Edwin
+  
+</div>
+<div class="clearfix"></div></footer>
+  </div>
+  <script src="http://lib.sinaapp.com/js/jquery/1.9.0/jquery.min.js"></script>
+<script src="js/jquery.imagesloaded.min.js"></script>
+<script src="js/main.js"></script>
+
+
+
+
+<link rel="stylesheet" type="text/css" href="fancybox/jquery.fancybox.css">
+<script type="text/javascript" src="fancybox/jquery.fancybox.js"></script>
+<script type="text/javascript">
+(function($){
+  $('.fancybox').fancybox({
+    prevEffect: 'none',
+    nextEffect: 'none',
+    closeBtn: false,
+    helpers: {
+        title: {type: 'inside'},
+        buttons: {
+            position: 'bottom'
+        }
+    }
+  });
+})(jQuery);
+</script>
+
+</body>
+</html>
