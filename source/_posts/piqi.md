@@ -1,14 +1,13 @@
-title: piqi项目2
+title: piqi项目
 date: 2014-02-02 18:18:30
 updated : 
 permalink: 
 tags:
-categories:
--  FAQ
+categories: 首页
 ---
 [示例](#examples) // [局限性](#limitations) // [入门](#howtogetstarted) // [项目进展](#projectstatus)
 
-![](/images/piqi-small.png)
+![](images/piqi-small.png)
 
 Piqi (/pɪki/)是一种schema语言,与之对应有一些工具.
 
@@ -557,7 +556,8 @@ type phone-type =
 
 Piqi 还处于Beta版.
 
-已经在Linux和Mac OS X平台上经过测试. 其他Unix系统也应该能够运行.比如, Piqi能够运行在 FreeBSD 和 Solaris/x86. Windows上可以利用MinGW and Cygwin来编译Piqi.详细信息参考[安装指南](http://github.com/alavrik/piqi/blob/master/INSTALL) .
+已经在Linux和Mac OS X平台上经过测试. 其他Unix系统也应该能够运行.比如, Piqi能够运行在 FreeBSD 和 Solaris/x86. Windows上可以利用MinGW and Cygwin来编译Piqi.  
+详细信息参考[安装指南](http://github.com/alavrik/piqi/blob/master/INSTALL) .
 
 查阅[Roadmap page](/roadmap/),查看Piqi计划实现的特性. 
 

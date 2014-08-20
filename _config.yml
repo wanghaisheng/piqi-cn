@@ -17,7 +17,7 @@ root:  /
 permalink: :year/:month/:day/:title/
 tag_dir: tags
 archive_dir: archives
-category_dir: categories
+category_dir: /
 code_dir: downloads/code
 
 # Directory
@@ -83,6 +83,7 @@ disqus_shortname:
 ## Themes: https://github.com/tommy351/hexo/wiki/Themes
 theme: hexo-theme-pithiness
 exclude_generator:
+- home
 
 # Deployment
 ## Docs: http://hexo.io/docs/deployment.html

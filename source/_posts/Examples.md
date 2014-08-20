@@ -1,10 +1,9 @@
-title: piqi 项目
+title: piqi 实例
 date: 2014-06-13 16:08:30
 updated : 
 permalink: 
 tags:
-categories:
--  实例
+categories: 实例
 -------------
 # [piqi 项目](http://piqi.org/)
 **目录**
